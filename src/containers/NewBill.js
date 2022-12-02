@@ -24,7 +24,8 @@ export default class NewBill {
     // define the extensions file accepted for upload
     const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i
     // if the filemane extension is not allowed, then give it an empty string to forbid to submit
-    if(!allowedExtensions.exec(fileName)){
+    if(allowedExtensions.exec(fileName) === null){
+      alert("please upload a JPG, JPEG or PNG file")
       this.document.querySelector(`input[data-testid="file"]`).value = ""
     } else {
     const formData = new FormData()

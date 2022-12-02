@@ -6,7 +6,10 @@
     "verbose": false,
     "setupFiles": [
       "./setup-jest.js"
-    ],
+    ],"moduleDirectories": [
+      "node_modules",
+      "src"
+  ],
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/app/**",
